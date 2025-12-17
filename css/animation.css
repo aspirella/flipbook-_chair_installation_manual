@@ -1,0 +1,29 @@
+/* --- Brand Animation (CSS Only) --- */
+.brand-text .letter {
+    display: inline-block;
+    transform-origin: center center;
+    /* Fallback for no var support */
+    animation: bounceAndRotate 2s ease-in-out infinite;
+    /* Stagger delay based on index set in JS */
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes bounceAndRotate {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    30% {
+        transform: translateY(-8px) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    70% {
+        transform: translateY(-4px) rotate(5deg);
+    }
+}
